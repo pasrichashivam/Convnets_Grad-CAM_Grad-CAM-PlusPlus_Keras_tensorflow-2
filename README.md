@@ -9,22 +9,23 @@
 ###### Disadvatage of CAM
 * The above specific combination of last 3 layers of CNN avoid CAM to be applied to variety of Network Architectures.
 * CAM cannot be used to Explain class specific features.
-
-![CAM (Class Activation Mapping)](images/CAM.png?raw=true "CAM") 
+![CAM (Class Activation Mapping)](Images/CAM.png?raw=true "CAM") 
 
 2. **Grad-CAM: (Gradient Based Class Activation Mapping)**
 	* **Link**:https://arxiv.org/pdf/1610.02391.pdf
+	
+![Grad-CAM (Gradient Based Class Activation Mapping)](Images/GRAD_CAM.png?raw=true "Grad-CAM") 
 * Grad-CAM uses the gradients of any target class (e.g. tigercat) flowing into the final Convolutional
-layer to produce the feature map highlightijng the important regions in the image responsible for provided target class (e.g. tigercat)
+layer to produce the feature map highlighting the important regions in the image responsible for provided target class (e.g. tigercat)
 * Unlike CAM, Grad-CAM is applicable to a wide variety of CNN models.
 ###### Disadvatage of Grad-CAM.
 * It does not give good results if there are multiple objects of the same target class in an image.
  
-![Grad-CAM (Gradient Based Class Activation Mapping)](images/GRAD_CAM.png?raw=true "CAM") 
-
 3. **Grad-CAM++: (Improved version of Grad-CAM)**
 	* **Link**:https://arxiv.org/pdf/1710.11063.pdf
-* Grad-CAM++ solves the disadvantage of Grad-CAM by introducing the new equation created by using the higher order derivatives (first, second & third derivative) flowing to the Convolution layer.
-* This term is then combined with the equation of Grad-CAM and follow the same architecture as in Grad CAM.
+
+![Grad-CAM++](Images/GRAD_CAM_PP.png?raw=true "Grad-CAM++") 
+* Grad-CAM++ solves the disadvantage of Grad-CAM by introducing the new equation (a <sup>kc</sup><sub>ij</sub>) created by using the higher order derivatives (first, second & third derivative) flowing to the Convolution layer.
+* This equation is then combined with the equation of Grad-CAM and follow the same architecture as in Grad CAM.
 * Grad-CAM is also applicable to a wide variety of CNN models.
-* It good results even if there are multiple objects of the same target class in an image.
+* It gives good results even if there are multiple objects of the same target class in an image.
